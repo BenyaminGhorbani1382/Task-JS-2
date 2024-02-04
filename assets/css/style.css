@@ -521,6 +521,25 @@
   filter: invert();
 }
 
+
+table {
+  direction: rtl;
+  border-collapse: collapse;
+  width: 58%;
+  margin-inline: 20rem;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: right;
+}
+
+th {
+  background-color: rgb(230, 230, 230);
+}
+
 .bg_footer {
   background-image: url(../img/header_bg.jpg);
   display: flex;

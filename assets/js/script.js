@@ -122,6 +122,54 @@ function boxSliderBanking() {
 }
 boxSliderBanking();
 
+document.addEventListener("DOMContentLoaded", function () {
+  var data = [
+    {
+      row: 1,
+      name: "beni",
+      nationalId: "1234567890",
+      birthDate: "1990/01/01",
+    },
+    {
+      row: 2,
+      name: "arya",
+      nationalId: "0987654321",
+      birthDate: "1985/05/05",
+    },
+    {
+      row: 3,
+      name: "aran",
+      nationalId: "0987654321",
+      birthDate: "1985/05/05",
+    },
+    {
+      row: 4,
+      name: "ali",
+      nationalId: "0987654321",
+      birthDate: "1985/05/05",
+    },
+    {
+      row: 5,
+      name: "samin",
+      nationalId: "0987654321",
+      birthDate: "1985/05/05",
+    },
+  ];
+
+  var tableBody = document.querySelector("#myTable tbody");
+
+  data.forEach(function (item) {
+    var row = document.createElement("tr");
+    row.innerHTML = `
+              <td>${item.row}</td>
+              <td>${item.name}</td>
+              <td>${item.nationalId}</td>
+              <td>${item.birthDate}</td>
+          `;
+    tableBody.appendChild(row);
+  });
+});
+
 let iconMenuHeaderResponsive = document.getElementById(
   "boxIconMenuHeaderResponsive"
 );
@@ -139,4 +187,4 @@ multipliedHeader.onclick = () => {
   menuHeaderResponsive.style.width = "0";
   menuHeaderResponsive.style.transition = "0.2s";
   menuHeaderResponsive.style.boxShadow = "0px 0px 0px 0px";
-}
+};
